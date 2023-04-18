@@ -1,10 +1,14 @@
 const { BOT_TOKEN, CLIENT_ID } = require('./config.json');
-const { REST, Routes } = require('discord.js');
+const { REST, Routes, Message } = require('discord.js');
 
 const commands = [
   {
-    name: 'ping',
-    description: 'Replies with Pong!',
+    name: "ping",
+    description: "Replies with Pong!",
+  },
+  {
+    name: "server",
+    description: "Replies with server info!",
   },
 ];
 
@@ -36,5 +40,13 @@ client.on('interactionCreate', async interaction => {
     await interaction.reply('Pong!');
   }
 });
+
+client.on('interactionCreate', async interaction => {
+    if (interaction.commandName === 'server') {
+        await interaction.reply(`Server name: ${interaction.guild.name}\nTotal members: ${interaction.guild.memberCount}`);
+    }
+});
+
+
 
 client.login(BOT_TOKEN);

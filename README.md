@@ -1,6 +1,6 @@
 # discord-bot-any
 
-## Instalation
+## Run the project
 - 1. Clone the repository
 ```
 $ git clone https://github.com/Diego22rct/discord-bot.git

@@ -9,7 +9,7 @@ $ git clone https://github.com/Diego22rct/discord-bot.git
 ```
 $ npm install 
 ```
--3. Run 
+- 3. Run 
 ```
 $ node index.js
 ```
